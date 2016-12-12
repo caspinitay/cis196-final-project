@@ -1,0 +1,9 @@
+<% if logged_in? %>
+<h1> Welcome to TripPlanner, <%= "#{current_user.name}" %>! </h1>
+<% else %>
+<h1> Welcome to TripPlanner! </h1>
+<% end %>
+
+<p> This is a community of trip planners and adventure-seekers. </p>
+
+<%= link_to 'New User', new_user_path %>

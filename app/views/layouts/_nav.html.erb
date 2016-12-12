@@ -1,0 +1,18 @@
+<nav class="nav-banner">
+  <% if logged_in? %>
+    <p> Hello, <%= "#{current_user.name}" %>!</p>
+    <a class="nav-btn" href="/">Home</a>
+    <a class="nav-btn" href="/users">Users</a>
+    <a class="nav-btn" href="/trips">Trips</a>
+  	<a class="nav-btn" href=<%="/users/#{current_user.id}"%>><%="#{current_user.name}"%></a>
+    <a class="nav-btn" href="/logout">Logout</a>
+  <% else %>
+  	<a class="nav-btn" href="/login">Login</a>
+    <a class="nav-btn" href="/users/new">Sign Up</a>
+  <% end %>
+  <!-- % if admin? % -->
+    <!-- %= 'TODO: Admin Page' %-- >
+  <!-- % end %-->
+  <span class="nav-sessions">
+  </span>
+</nav>
