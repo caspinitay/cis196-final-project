@@ -1,4 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<p><%= @user.name %>'s trips:</p>
+<% @user.trips.each do |trip| %>
+<ul><%= trip.title %></ul>
+<% end %>
+
+<% if !@user.trips.any? %>
+<ul><%= "You have not joined any trips yet! Start by clicking on 'Trips' in the nav bar to see what trips are available!" %></ul>
+<% end %>
+
+<% if admin? || @user.id == session[:user_id] %>
 <%= link_to 'Edit', edit_user_path(@user) %> |
+<% end %>
 <%= link_to 'Back', users_path %>

@@ -11,8 +11,7 @@ class ApplicationController < ActionController::Base
     @user ||= User.find(session[:user_id]) if logged_in?
   end
 
-  # TODO: implement admin functionality
-  # helper_method def admin?
-  #   current_user.admin? if logged_in?
-  # end
+  helper_method def admin?
+    User.find(session[:user_id]).name.eql?("Nitay")
+  end
 end

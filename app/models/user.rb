@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
   has_many :trips, through: :trips_users
   include BCrypt
 
-
   def password
     @password ||= Password.new(password_hash)
   end
@@ -22,4 +21,5 @@ class User < ActiveRecord::Base
     @user.password = params[:password]
     @user.save!
   end
+
 end

@@ -6,9 +6,10 @@ Rails.application.routes.draw do
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
-
   get '/logout' => 'sessions#destroy'
 
+  get '/trips/:trip_id/join' => 'join#new'
+  get '/trips/:trip_id/leave' => 'join#leave'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

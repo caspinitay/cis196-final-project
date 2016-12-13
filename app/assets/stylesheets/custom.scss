@@ -1,0 +1,47 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+
+h1{
+  font-size: 3em;
+  text-align: center;
+}
+
+body {
+  padding-top: 20px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+nav {
+  background-color: black;
+  text-align: left;
+  color: #999
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+tr {
+  border-bottom: 1px solid #ddd;
+  padding-top: 15px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
